@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <meta name = "viewport" content="width = device-width scale=1">
+    <link rel = "stylesheet" href = "proj11.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap" rel="stylesheet">
+<body>
+
+    <header>
+        <a href = "#" class = "logo"> Logo </a>
+        <ul>
+            <li><a href = "#" class = "active">Home</a></li>
+            <li><a href = "#">About</a></li>
+            <li><a href = "#">Work</a></li>
+            <li><a href = "#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src = "stars.png" id = "stars">
+        <img src = "moon.png" id = "moon">
+        <img src = "mountains_behind.png" id = "mountains_behind">
+        <h2 id = "text">Moon Light</h2>
+        <a href = "#sec" id = "btn"> Explore</a>
+        <img src = "mountains_front.png" id = "mountains_front">
+    </section>
+    <div class = "sec" id = "sec">
+        <h2> Parallax Scrolling Effects</h2>
+        <p>
+            Adipisicing eiusmod ex tempor nostrud minim. Fugiat duis velit sit deserunt fugiat incididunt consequat do irure. Incididunt magna aliquip adipisicing in ea Lorem. Proident id qui ut culpa duis tempor ut occaecat ea cupidatat exercitation id aute. Ea dolore mollit labore pariatur eu non. Exercitation non consequat elit ex deserunt ullamco irure occaecat minim in. Deserunt incididunt voluptate id ipsum pariatur.
+
+Ea ut incididunt nostrud id consequat fugiat pariatur ut nulla cupidatat quis. Consectetur pariatur esse consectetur dolor pariatur ex et laborum Lorem sint sunt nisi deserunt. Magna in aute adipisicing dolor nisi est nulla. Do ad elit consequat anim officia amet esse dolore do tempor nostrud incididunt quis minim. Dolore esse aute labore aliqua sint deserunt eiusmod excepteur excepteur aliqua eiusmod. Do voluptate deserunt ex laboris amet irure ad mollit duis cupidatat. Tempor officia et eiusmod minim id cillum non officia voluptate cillum veniam sit magna.
+
+Est quis cillum exercitation ipsum ex aliqua. Sunt in occaecat dolor velit qui non laborum sunt deserunt aliquip non voluptate est. Do sunt quis minim cupidatat mollit consequat consequat aliquip. Ut culpa amet in consectetur magna est ipsum labore velit mollit aute minim quis duis. Veniam incididunt nostrud non excepteur nostrud. Nulla id laboris eiusmod in anim cillum duis. Excepteur elit esse qui dolor ut est officia non commodo eu aliquip et quis.
+
+Velit qui do adipisicing ex amet ut nulla tempor minim in aliquip. Irure ut minim laborum sint ea pariatur quis sint laboris sint ut exercitation deserunt. Lorem velit ad labore aliquip deserunt nostrud mollit irure ea. Irure laborum velit sit dolor id aliqua minim officia quis adipisicing.
+
+<br><br>                Adipisicing eiusmod ex tempor nostrud minim. Fugiat duis velit sit deserunt fugiat incididunt consequat do irure. Incididunt magna aliquip adipisicing in ea Lorem. Proident id qui ut culpa duis tempor ut occaecat ea cupidatat exercitation id aute. Ea dolore mollit labore pariatur eu non. Exercitation non consequat elit ex deserunt ullamco irure occaecat minim in. Deserunt incididunt voluptate id ipsum pariatur.
+
+Ea ut incididunt nostrud id consequat fugiat pariatur ut nulla cupidatat quis. Consectetur pariatur esse consectetur dolor pariatur ex et laborum Lorem sint sunt nisi deserunt. Magna in aute adipisicing dolor nisi est nulla. Do ad elit consequat anim officia amet esse dolore do tempor nostrud incididunt quis minim. Dolore esse aute labore aliqua sint deserunt eiusmod excepteur excepteur aliqua eiusmod. Do voluptate deserunt ex laboris amet irure ad mollit duis cupidatat. Tempor officia et eiusmod minim id cillum non officia voluptate cillum veniam sit magna.
+
+Est quis cillum exercitation ipsum ex aliqua. Sunt in occaecat dolor velit qui non laborum sunt deserunt aliquip non voluptate est. Do sunt quis minim cupidatat mollit consequat consequat aliquip. Ut culpa amet in consectetur magna est ipsum labore velit mollit aute minim quis duis. Veniam incididunt nostrud non excepteur nostrud. Nulla id laboris eiusmod in anim cillum duis. Excepteur elit esse qui dolor ut est officia non commodo eu aliquip et quis.
+
+Velit qui do adipisicing ex amet ut nulla tempor minim in aliquip. Irure ut minim laborum sint ea pariatur quis sint laboris sint ut exercitation deserunt. Lorem velit ad labore aliquip deserunt nostrud mollit irure ea. Irure laborum velit sit dolor id aliqua minim officia quis adipisicing.
+    </p>
+    </div>
+
+    <script>
+        var stars = document.getElementById('stars');
+        var moon = document.getElementById('moon');
+        var mountains_behind = document.getElementById('mountains_behind');
+        var mountains_front = document.getElementById('mountains_front');
+        var text = document.getElementById('text');
+        var btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.25 + 'px';
+            moon.style.top = value*1.05 + 'px';
+            mountains_behind.style.top = value*0.5 + 'px';
+            mountains_front.style.top = value*0 + 'px';
+            text.style.marginRight = value*4 + 'px'; 
+            text.style.marginTop = value*1.5 + 'px'; 
+            btn.style.marginTop = value*1.5 + 'px'; 
+            header.style.top = value*0.5 + 'px';
+        });
+    </script>
+</body>
+</html>
